@@ -1,7 +1,14 @@
-FROM alpine
+FROM debian:slim
 
-RUN apk add --no-cache bash
-ADD mo /usr/local/bin/mo
-RUN chmod +x /usr/local/bin/mo
+WORKDIR /usr/local/bin
 
-ENTRYPOINT /usr/local/bin/mo
+RUN groupadd --gid 1000 app && \
+    useradd --uid 1000 --gid app --shell /bin/bash --create-home app
+
+COPY --chown=app:app mo .
+
+RUN chmod +x mo
+
+USER appuser
+
+ENTRYPOINT ["./mo"]
