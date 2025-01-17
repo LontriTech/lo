@@ -1,13 +1,25 @@
+---
 name: CI
+
 on: [push]
+
+defaults:
+  run:
+    shell: bash
+
 jobs:
   test:
-    name: Test
+    name: "Test"
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
-        uses: actions/checkout@v1
-      - name: Run tests
+      - name: "Checkout Code"
+        id: checkout
+        uses: actions/checkout@v4
+
+      - name: "Run Tests"
+        id: run_tests
         run: ./run-tests
-      - name: Run against spec
+
+      - name: "Run Against Spec"
+        id: run_spec
         run: ./run-spec
