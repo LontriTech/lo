@@ -16,6 +16,10 @@ jobs:
         id: checkout
         uses: actions/checkout@v4
 
+      - name: "Run Shellcheck"
+        id: run_shellcheck
+        run: shellcheck ./mo
+
       - name: "Run Tests"
         id: run_tests
         run: ./run-tests
