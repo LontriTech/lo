@@ -1,0 +1,82 @@
+# GitAttributes is awesome: https://git-scm.com/docs/gitattributes
+# GitAttributes enforces consistent file handling across systems, preventing conflicts and friction
+
+# Default identify text files \
+# && line endings to LF \
+# && sets charset to UTF-8 \
+# && fixes whitespaces
+* text=auto eol=lf working-tree-encoding=UTF-8 whitespace=fix
+
+# [Specific] Git Archive
+# About: https://git-scm.com/docs/git-archive
+*.editorconfig export-ignore
+*.gitattributes export-ignore
+*.gitignore export-ignore
+*.md export-ignore
+*.sh export-subst
+
+# [Specific] GitHub Linguist
+# About: https://github.com/github-linguist/linguist
+*.mustache linguist-language=mustache linguist-detectable
+*.md linguist-language=markdown linguist-documentation
+*.editorconfig linguist-language=editorconfig -linguist-detectable
+*.gitattributes linguist-language=gitattributes -linguist-detectable
+*.gitignore linguist-language=ignore -linguist-detectable
+
+# Binary/Non-text files (no diff, no normalize)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.bmp binary
+*.tiff binary
+*.ico binary
+*.mp3 binary
+*.wav binary
+*.flac binary
+*.ogg binary
+*.mp4 binary
+*.mkv binary
+*.avi binary
+*.mov binary
+*.wmv binary
+*.flv binary
+*.exe binary
+*.dll binary
+*.so binary
+*.o binary
+*.a binary
+*.lib binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.7z binary
+*.rar binary
+*.iso binary
+*.pdf binary
+*.epub binary
+*.swf binary
+*.psd binary
+*.ai binary
+*.indd binary
+*.sketch binary
+*.woff binary
+*.woff2 binary
+*.eot binary
+*.ttf binary
+*.otf binary
+*.bin binary
+*.dmg binary
+*.class binary
+*.jar binary
+*.pyc binary
+*.pyo binary
+*.deb binary
+*.rpm binary
+*.apk binary
+*.msi binary
+*.cr2 binary
+*.nef binary
+*.dng binary
+*.raw binary
+*.xsl binary
