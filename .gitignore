@@ -1,4 +1,41 @@
+# GitIgnore is awesome: https://git-scm.com/docs/gitignore
+# GitIgnore prevents committing unnecessary or sensitive files, optimizing security and repository size
+
+# Logs and temp files
+*.log
+*.tmp
+*.lock
+*.out
+*.bak
 *.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Shell and Bash files
+.bash_history
+*~
+
+# Environment variables
+.env*
+
+# Compiled code or temporary files
+*.shellcheck
+dist/*
+
+# IDE/Editor settings
+.idea/
+*.iml
+.vscode/
+.vscode-test/
+.vscode-extensions/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+
+# Others
 diagnostic.partial
 diagnostic.test
 tests/*.diff
